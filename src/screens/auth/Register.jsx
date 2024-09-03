@@ -28,8 +28,32 @@ const Login = () => {
     <KeyboardAwareScrollView
       style={{backgroundColor: 'white'}}
       contentContainerStyle={{flex: 1}}>
-      <StyledView  className="flex-1 p-3 items-center bg-white justify-center">
-        <StyledText className="text-4xl my-2">Login</StyledText>
+      <StyledView className="flex-1 p-3 items-center justify-center">
+        <StyledText className="text-4xl my-2">Register</StyledText>
+        <Input
+          inputName="name"
+          placeholder="Enter your name..."
+          inputValue={formData?.name}
+          handleInputChange={handleInputChange}
+          error={errors?.name}
+          multiline={false}
+        />
+        <Input
+          inputName="surname"
+          placeholder="Enter your surname..."
+          inputValue={formData?.surname}
+          handleInputChange={handleInputChange}
+          error={errors?.surname}
+          multiline={false}
+        />
+        <Input
+          inputName="about"
+          placeholder="Enter your about"
+          inputValue={formData?.about}
+          handleInputChange={handleInputChange}
+          error={errors?.about}
+          multiline={false}
+        />
         <Input
           inputName="email"
           placeholder="Enter your email..."
@@ -52,9 +76,9 @@ const Login = () => {
             Submit
           </StyledText>
         </StyledTouchableOpacity>
-        <StyledTouchableOpacity onPress={() => navigation.navigate('Register')}>
+        <StyledTouchableOpacity onPress={() => navigation.navigate('Login')}>
           <StyledText className="text-center text-[16px]">
-            Don't have an account?
+            Already have an account?
           </StyledText>
         </StyledTouchableOpacity>
       </StyledView>

@@ -9,12 +9,12 @@ const TabStack = () => {
     <Tab.Navigator>
       <Tab.Screen
         options={{headerShown: false}}
-        name="Homepage"
+        name="Homestack"
         component={HomeStack}
       />
       <Tab.Screen
         options={{headerShown: false}}
-        name="Login"
+        name="Loginstack"
         component={AuthStack}
       />
     </Tab.Navigator>
